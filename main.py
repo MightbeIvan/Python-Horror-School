@@ -80,13 +80,6 @@ def HomeroomChoice():
             
             die("You feel the darkness getting closer,you should not have stayed.")
             
-        
-        
-        
-    
-    
-    
-
 
 #Read the book in the Homeroom Room.
 
@@ -148,9 +141,6 @@ def Enter_Homeroom():
     print()
     
     
-
-
-
 def intro():
     os.system("cls" if os.name == "nt" else "clear")
     type("You spawn in a dark room..",0.05)
@@ -213,7 +203,111 @@ def hallway_scene():
             type("You walk towards the general area of the lockers.")
             type("Something mysterious jumps out the lockers,its a hand,it grabs your leg and pulls you inside of the locker")
             die("The darkness slowly consumes you.")
+            
+        if choice2 == "2":
+            type()
 
+def Library_scene():
+    clear()
+    
+    type("You step into the Library")
+    print()
+    
+    input("Press Enter")
+    print()
+    
+    type("The air is stale. Dust coats every surface.")
+    print()
+    
+    type("None of the lights reach the far corners.")
+    print()
+
+    type("The bookshelves are freakishly long and tall.")
+    print()
+    
+    type("Along the right side of the library, a single book lies open,with the pages already tuned.")
+    print()
+    
+    type("what do you choose to examine?")
+    print()
+    
+    type("1.The open book")
+    type("2.The Yearbooks")
+    type("3. Leave the library")
+    
+    libchoice= input(">")
+    print()
+    
+    if libchoice == "1":
+        type("You read the open book")
+        print()
+        
+        type("The text looks hand-written, not printed.")
+        print()
+        
+        type("it reads:")
+        print()
+        
+        type("If you found this, you are still early.")
+        print()
+        
+        type("Most of us weren't.")
+        print()
+        
+        input("Press Enter to Turn The Page")
+        print()
+        
+        type("You turn the page.")
+        print()
+        
+        type("It reads: ")
+        print()
+        
+        type("The phones were installed after the first dissaperance")
+        print()
+        
+        type("The were meant to keep the students and teachers calm")
+        print()
+        
+        type("But they learned to lie instead.")
+        print()
+        
+        type('in shakier ink it said: "The Phones Know How To Lie"')
+        print()
+        
+        input("Press Enter")
+        #After you look up from the book,you should feel drowsy and slwwpy,close your eyes and opwn them back up to see yourself back in the hallways,this time 
+        #The library has a big sign that says "closed, you know too many things about the library"
+        
+    elif libchoice == "2":
+        type("You pull a yearbook of a shelf,the yearbook of this current year,1974.")
+        type("The Faces stare back at you,blinking and breathing")
+        type("Some faces have been violently scratched out with what looks like red ink.")
+        
+        type("One name apeared again and again,circled in bold red ink")
+        type("The name is ELLIOT MARROW")
+        type("A note is scribbled next to his name")
+        type('it reads : "He noticed before the rest of us."')
+        
+        input("Press Enter")
+        #Same knckout techique...
+        
+    elif libchoice == "3":
+        type("As you step away from the shelves")
+        type("A book falls somewhere behind you")
+        type("You do not turn around")
+        type ("As you walk out the door,you notice something strange,the hallways have shifted")
+        #Same KO tech
+    
+    else:
+        die("The Darkness slowly but surely swallows you.")
+    
+        
+        
+        
+    
+    
+    
     
     
     
@@ -222,6 +316,6 @@ def hallway_scene():
 intro()
 Enter_Homeroom()
 HomeroomChoice()
-
+ 
 if book_read == True:
     hallway_scene()
