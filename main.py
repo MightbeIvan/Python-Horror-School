@@ -33,19 +33,24 @@ def use_phone():
 
 #Light effects (TO build suspense)
 def LightEffect():
-    
+    time.sleep(2)
+
     os.system("cls" if os.name == "nt" else "clear")
     type("The lights flicker.")
     print()
+    time.sleep(0.5)
     
     type("For a moment, All the lights completely shut off.")
     print()
-    
+    time.sleep(0.5)
+
     input("(Press Enter)")
     print()
     
+    time.sleep(0.5)
     type("The lights return. Something feels closer.")
     print()
+    time.sleep(0.5)
 
 def HomeroomChoice():
    
@@ -121,19 +126,24 @@ def Enter_Homeroom():
     
     type("The door creaks loudly as you step inside...\n",0.03)
     print()
-    
+    time.sleep(0.5)
+
     type('You find yourself standing in a dim room,looks like a classroom but its empty',0.03)
     print()
-    
+    time.sleep(0.5)
+
     type('only thing in view is a table with a book on it that says “Escape Plan…',0.03)
     print()
-    
+    time.sleep(0.5)
+
     type('There is also a sketchy looking landline phone,extremely dusty and looks like its covered with spider webs',0.03)
     print()
-    
+    time.sleep(0.5)
+
     type('Perchance you can call your parents?', 0.03)
     print()
-    
+    time.sleep(0.5)
+
     LightEffect()
     print()
     
@@ -168,12 +178,13 @@ def intro():
     type("You don’t remember how you got here.",0.05)
     type("Somewhere in the school, a door creaks...loud,very disturbing \n",0.05)
     print()
-    
-    input("(Press Enter to continue)")
+
     os.system("cls" if os.name == "nt" else "clear")
+    input("(Press Enter to continue)")
+  
     
     print()
-    type("You are not alone…\n",0.5)
+    type("You are not alone…\n",0.3)
     print()
     
     input("(Press Enter to continue)")
@@ -184,10 +195,12 @@ def hallway_scene():
     print()
     input("Press Enter to Contnue")
     
-    type("Lockers line in the walls, some dented, some hanging open. Some hanging open.")
-    type("The lights buzz unevenly.")
-    type("on the right side of the hallway,there is a door that says Bathroom")
-    type('At the far end,there is a room with the words "Library" written in bold fancy letters')
+    type("Lockers line in the walls, some dented, some hanging open. Some hanging open.",0.05)
+    
+    type("The lights buzz unevenly.",0.05)
+    type("on the right side of the hallway,there is a door that says Bathroom",
+         0.05)
+    type('At the far end,there is a room with the words "Library" written in bold fancy letters',0.05)
     input("Press Enter To Coninue")
     
     while True:
@@ -204,8 +217,12 @@ def hallway_scene():
             type("Something mysterious jumps out the lockers,its a hand,it grabs your leg and pulls you inside of the locker")
             die("The darkness slowly consumes you.")
             
-        if choice2 == "2":
-            type()
+        elif choice2 == "2":
+            Library_scene()
+        
+        elif choice2 == "3":
+            print("Incomplete")
+        
 
 def Library_scene():
     clear()
