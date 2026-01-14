@@ -3,8 +3,8 @@ import os
 import random
 import sys
 
-phone_used = True
-book_read = True
+phone_used = False
+book_read = False
 HrChoices = True
 
 def clear():
@@ -54,9 +54,9 @@ def LightEffect():
     time.sleep(0.5)
 
 def HomeroomChoice():
-   
+    global phone_used, book_read
     
-    while HrChoices:
+    while True:
         print()
         type("What do you do?")
         type("1. Read the book")
@@ -72,7 +72,7 @@ def HomeroomChoice():
         elif choice == "2":
             use_phone()
             book_read = False
-            break
+            die("The voice waits \n You were never meant to hear it.")
             
         else:
             type("Your vision goes blurry")
@@ -86,7 +86,119 @@ def HomeroomChoice():
             
             die("You feel the darkness getting closer,you should not have stayed.")
 
-     
+def bathroom_scene():
+    clear()
+    type("You push the bathroom door open..")
+    
+    print()
+    input("(Press Enter)")
+    
+    type("The smell hits you immidietly")
+    type("Old water. Rust. Something sweet underneath.")
+    
+    print()
+    type("The lights flicker but stay on ")
+    type("All the stalls remain closed.")
+    
+    print()
+    type("The mirror strectches tall over the stalls.")
+    type("Your reflection looks slightly delayed.")
+    
+    while True:
+        type("What do you do?")
+        type("1. Look in the Mirror")
+        type("2. Check the stalls")
+        type("3. Read the Graffiti")
+        type("4. Leave the bathroom")
+        
+        Br_Choice = input("> ").strip().replace(" ","")
+        
+        #Mirror 
+        if Br_Choice == "1":
+            clear()
+            type("You step closer to the mirror.")
+            type("Your reflection stares back at you")
+            
+            print ()
+            input("(Press Enter)")
+            type("It doesn't blink when you do")
+            type("Its mouth moves a second too late.")
+            
+            print()
+            type("Your reflection whispers: ")
+            type("You stayed past 3:15.")
+            
+            print()
+            input("(Press Enter)")
+            type("You stumble backwards, Your heart racing.")
+            
+        #Stalls (This kills you.)
+        elif Br_Choice == "2":
+            clear()
+            type("You aprach the stalls")
+            type("The first stall is locked")
+            type("The Second stall is also locked")
+            
+            print()
+            input("(Press Enter)")
+            
+            type("The third stall cracks open by itself and creaks loudly.")
+            print()
+            
+            input("(Press Enter)")
+            type("Something wet drips unto the floor from the celing")
+            print()
+            
+            die("A hand shoots out of the darkness \n You never hit the floor.")
+            
+        #Graffiti (Lore drop)
+        elif Br_Choice == "3":
+            clear()
+            type("You read the graffiti on the wall")
+            
+            print()
+            type("Names are carved everywhere.")
+            type("Some Crossed out. Others circled")
+            
+            print()
+            type("One message repeats over and over:\n")
+            type("DO NOT ANSWER AFTER 3:15")
+            
+            print()
+            type("Below it,Written smaller:/n")
+            type('"Elliot Tried to warn us", "We did not lisen"')
+            
+            print()
+            type('Another line is written underneath, Fresher,more violent:')
+            type('"The School lisens in here')
+            
+            print()
+            type("You feel watched.")
+            
+            print()
+            input("(Press Enter To Continue)")
+            
+        elif Br_Choice == "4":
+            clear()
+            type("You turn for the door")
+            
+            print()
+            input("(Press Enter)")
+            
+            type("The lights shut behind you.")
+            
+            time.sleep(2)
+            input("(Press Enter)")
+            
+            type("You are back in the hallway")
+            return
+            
+        else:
+            type("Your voice echos wrong in thhe room.")
+            
+    
+    
+    
 
 #Read the book in the Homeroom Room.
 
@@ -228,9 +340,10 @@ def hallway_scene():
             
         elif choice2 == "2":
             Library_scene()
+            return
         
         elif choice2 == "3":
-            print("Incomplete")
+            bathroom_scene()
 
 def hallway2():
     input("(Enter to continue)")
@@ -244,14 +357,35 @@ def hallway2():
 
     type("At the end of this halway,The library is stil there,This time,there's a big sign on the door")
     type('The sign says "Closed" and under it,written in a thick red substance,it says "You know too many things about this school"')
+    
+    print()
+    input("(Press Enter)")
+    
+    type("The school knows that you noticed.")
+    input("(Press Enter )")
+    clear()
+    type("End Of day one")
+    
+    # print()
+    # type('Close to the library,there is a room next to it with "Main Office" writen on it')
+    # type("There is also a creepy looking bathroom next to it")
 
     print()
-    type('Close to the library,there is a room next to it with "Main Office" writen on it')
-    type("There is also a creepy looking bathroom next to it")
+    
 
+def Library_KO():
+    clear()
+    type("Your vision blurs.")
+    
     print()
-
-
+    type("Your head feels heavy")
+    
+    print()
+    input("(Press Enter)")
+    
+    clear()
+    type("You wake up somewhere else.")
+    hallway2()
 
 
 def Library_scene():
@@ -282,89 +416,87 @@ def Library_scene():
     type("2.The Yearbooks")
     type("3. Leave the library")
     
-    libchoice= input(">")
-    print()
+    while True:
+        libchoice = input("> ")
+        print()
     
-    if libchoice == "1":
-        type("You read the open book")
-        print()
+        if libchoice == "1":
+            
+            type("You read the open book")
+            print()
+            
+            type("The text looks hand-written, not printed.")
+            print()
+            
+            type("it reads:")
+            print()
+            
+            type("If you found this, you are still early.")
+            print()
+            
+            type("Most of us weren't.")
+            print()
+            
+            input("Press Enter to Turn The Page")
+            print()
+            
+            type("You turn the page.")
+            print()
+            
+            type("It reads: ")
+            print()
+            
+            type("The phones were installed after the first dissaperance")
+            print()
+            
+            type("The were meant to keep the students and teachers calm")
+            print()
+            
+            type("But they learned to lie instead.")
+            print()
+            
+            type('in shakier ink it said: "The Phones Know How To Lie"')
+            print()
+            
+            input("Press Enter")
+            clear()
+            
+            Library_KO()
+            return
         
-        type("The text looks hand-written, not printed.")
-        print()
-        
-        type("it reads:")
-        print()
-        
-        type("If you found this, you are still early.")
-        print()
-        
-        type("Most of us weren't.")
-        print()
-        
-        input("Press Enter to Turn The Page")
-        print()
-        
-        type("You turn the page.")
-        print()
-        
-        type("It reads: ")
-        print()
-        
-        type("The phones were installed after the first dissaperance")
-        print()
-        
-        type("The were meant to keep the students and teachers calm")
-        print()
-        
-        type("But they learned to lie instead.")
-        print()
-        
-        type('in shakier ink it said: "The Phones Know How To Lie"')
-        print()
-        
-        input("Press Enter")
-        clear()
-
-        type("You feel sleepy,your eyes close slowly and your head feels heavy.")
-        print()
-
-        type("You slowly drift away into sleep.")
-        print ()
-
-        hallway2()
 
 
         #After you look up from the book,you should feel drowsy and slwwpy,close your eyes and opwn them back up to see yourself back in the hallways,this time 
         #The library has a big sign that says "closed, you know too many things about the library"
     
 
-    elif libchoice == "2":
-        type("You pull a yearbook of a shelf,the yearbook of this current year,1974.")
-        type("The Faces stare back at you,blinking and breathing")
-        type("Some faces have been violently scratched out with what looks like red ink.")
+        elif libchoice == "2":
+            type("You pull a yearbook of a shelf,the yearbook of this current year,1974.")
+            type("The Faces stare back at you,blinking and breathing")
+            type("Some faces have been violently scratched out with what looks like red ink.")
+            
+            type("One name apeared again and again,circled in bold red ink")
+            type("The name is ELLIOT MARROW")
+            print()
+
+            input("(Press enter to continue)")
+
+            type("A note is scribbled next to his name")
+            type('it reads : "He noticed before the rest of us."')
+
+            print()
+            input("Press Enter")
+            #Same knckout techique...
+            
+        elif libchoice == "3":
+            type("As you step away from the shelves")
+            type("A book falls somewhere behind you")
+            type("You do not turn around")
+            type ("As you walk out the door,you notice something strange,the hallways have shifted")
+            #Same KO tech
         
-        type("One name apeared again and again,circled in bold red ink")
-        type("The name is ELLIOT MARROW")
-        print()
-
-        input("(Press enter to continue)")
-
-        type("A note is scribbled next to his name")
-        type('it reads : "He noticed before the rest of us."')
-
-        print()
-        input("Press Enter")
-        #Same knckout techique...
-        
-    elif libchoice == "3":
-        type("As you step away from the shelves")
-        type("A book falls somewhere behind you")
-        type("You do not turn around")
-        type ("As you walk out the door,you notice something strange,the hallways have shifted")
-        #Same KO tech
-    
-    else:
-        die("The Darkness slowly but surely swallows you.")
+        else:
+            die("The Darkness slowly but surely swallows you.")
     
         
         
@@ -380,6 +512,4 @@ def Library_scene():
 intro()
 Enter_Homeroom()
 HomeroomChoice()
- 
-if book_read == True:
-    hallway_scene()
+hallway_scene()
