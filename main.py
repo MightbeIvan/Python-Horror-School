@@ -345,7 +345,7 @@ def hallway_scene():
         elif choice2 == "3":
             bathroom_scene()
 
-def hallway2():
+def hallway2_From_Library():
     input("(Enter to continue)")
 
     clear()
@@ -373,6 +373,9 @@ def hallway2():
     print()
     
 
+
+
+
 def Library_KO():
     clear()
     type("Your vision blurs.")
@@ -385,7 +388,7 @@ def Library_KO():
     
     clear()
     type("You wake up somewhere else.")
-    hallway2()
+    hallway2_From_Library()
 
 
 def Library_scene():
@@ -487,26 +490,20 @@ def Library_scene():
             print()
             input("Press Enter")
             #Same knckout techique...
-            
+            Library_KO()
+
         elif libchoice == "3":
             type("As you step away from the shelves")
             type("A book falls somewhere behind you")
             type("You do not turn around")
             type ("As you walk out the door,you notice something strange,the hallways have shifted")
             #Same KO tech
+            Library_KO()
         
         else:
             die("The Darkness slowly but surely swallows you.")
-    
-        
-        
-        
-    
-    
-    
-    
-    
-    
+
+
 
 
 intro()
