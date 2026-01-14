@@ -317,7 +317,7 @@ def hallway_scene():
     type("Lockers line in the walls, some dented,  Some hanging open.",0.05)
     
     type("The lights buzz unevenly.",0.05)
-    type("on the right side of the hallway,there is a door that says Auditorium",0.05)
+    type("on the right side of the hallway,there is a door that says Bathroom",0.05)
     print()
     type('At the far end,there is a room with the words "Library" written in bold fancy letters',0.05)
     input("Press Enter To Coninue")
@@ -327,7 +327,7 @@ def hallway_scene():
         type("what do you do?")
         type("1. Check the lockers")
         type("2. Go to the Library")
-        type("3. Go to the Auditorium")
+        type("3. Go to the Bathroom")
         
         choice2 = input(">")
         
